@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <div class="form-field">
+            <div><label>Email</label></div>
+            <input type="email" name="email" id="email" placeholder="seu@gemail.com" onchange="onChangeEmail()"/>
+         
+        </div>
+        <div class="form-field">
+            <div><label>Senha</label></div>
+            <input type="password" name="password" id="password" placeholder="Senha" onchange="onChangePassword()"/>
+       
+        </div>
+        <div>
+            <input type="password" name="password" id="c_password" placeholder="confirmar Senha" onchange="onChangePassword()"/>
+        </div>
+        <div class="error" id="error">Senha nâo confere </div>
+        <div>
+            <button type="button" class="outline" onclick="cadastrar()">cadastrar</button>
+        </div>
+    </form>
+
+    <script src="./script.js"></script>
+</body>
+
+
+
+<script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-auth-compat.js"></script>
+<script>
+     const firebaseConfig = {
+    apiKey: "AIzaSyAXqOctL2w0e_llBpSWZ3ZfYsf2BENmI7Q",
+    authDomain: "sistema-financeiro-c4687.firebaseapp.com",
+    projectId: "sistema-financeiro-c4687",
+    storageBucket: "sistema-financeiro-c4687.appspot.com",
+    messagingSenderId: "476475276262",
+    appId: "1:476475276262:web:30fda33455d1bfe1a33427"
+  };
+  firebase.initializeApp(firebaseConfig)
+
+
+
+</script>
+</html>

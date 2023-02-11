@@ -1,0 +1,56 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Sistema Financeiro</title>
+</head>
+
+<body>
+    <form>
+        <div class="form-field">
+            <div><label>Email</label></div>
+            <input type="email" name="email" id="email" placeholder="seu@gemail.com" onchange="onChangeEmail()"/>
+            <div class="error" id="email-required-error">Email é obrigatório</div>
+            <div class="error" id="email-invalid-error">Email é inválido</div>
+        </div>
+        <div class="form-field">
+            <div><label>Senha</label></div>
+            <input type="password" name="password" id="password" placeholder="Senha" onchange="onChangePassword()"/>
+            <div class="error" id="password-required-error">Senha é obrigatória</div>
+        </div>
+        <div>
+            <button type="button" class="clear" id="recover-password-button" disabled="true">Recuperar senha</button>
+        </div>
+        <div>
+            <button type="button" class="solid" id="login-button" disabled="true" onclick="login()">Entrar</button>
+        </div>
+        <div>
+            <button type="button" class="outline" onclick="register()">Registrar</button>
+        </div>
+    </form>
+</body>
+
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="global.css">
+
+<script src="index.js"></script>
+<script src="validations.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.16.0/firebase-auth-compat.js"></script>
+<script>
+     const firebaseConfig = {
+    apiKey: "AIzaSyAXqOctL2w0e_llBpSWZ3ZfYsf2BENmI7Q",
+    authDomain: "sistema-financeiro-c4687.firebaseapp.com",
+    projectId: "sistema-financeiro-c4687",
+    storageBucket: "sistema-financeiro-c4687.appspot.com",
+    messagingSenderId: "476475276262",
+    appId: "1:476475276262:web:30fda33455d1bfe1a33427"
+  };
+  firebase.initializeApp(firebaseConfig)
+
+
+
+</script>
+
+</html>
